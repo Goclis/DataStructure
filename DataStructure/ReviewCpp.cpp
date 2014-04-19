@@ -76,13 +76,12 @@ void SubSet(T list[], int k, int m, int flags[]) {
     }
 }
 
-int main()
-{
-    int l[] = {1,2,3};
-
-    // Perm(l, 0, 2);
-    int flags[3] = {0}; 
-    SubSet(l, 0, 2, flags);
-	return 0;
-}
-
+//int main()
+//{
+//    int l[] = {1,2,3};
+//
+//    // Perm(l, 0, 2);
+//    int flags[3] = {0}; 
+//    SubSet(l, 0, 2, flags);
+//	return 0;
+//}
