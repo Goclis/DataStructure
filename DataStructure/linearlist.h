@@ -26,7 +26,7 @@ namespace goclis_list {
         bool Find(int k, T &x) const; // find the kth element, start from 0
         int Search(const T &x) const; // return the position of element x
         LinearList<T>& Delete(int k, T &x); // Delete the kth element and set x
-        LinearList<T>& Insert(int k, const T &x); // Insert the element x after the kth element
+        LinearList<T>& Insert(int k, const T &x); // Insert the element x as the kth element
         void Output() const; // Print list
         
     private:
@@ -110,7 +110,7 @@ namespace goclis_list {
         return *this;
     }
 
-    // Insert x after position k,
+    // Insert x at position k,
     // allow k == length, means append
     // return NULL if k out of bound or list is full
     // else return the reference of the new list (*this)
@@ -124,17 +124,11 @@ namespace goclis_list {
             throw NoMemoryException(); // no memory
         }
 
-        // move k + 1, ..., length - 1 backwards
-        for (int i = length - 1; i > k; --i) {
+        // move k, k + 1, ..., length - 1 backwards
+        for (int i = length - 1; i >= k; --i) {
             elements[i + 1] = elements[i];
         }
-        
-        if (length == 0) {
-            elements[k] = x;
-        } else {
-            elements[k + 1] = x;
-        }
-        
+        elements[k] = x;        
         length += 1;
 
         return *this;
