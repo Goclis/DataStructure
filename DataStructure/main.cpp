@@ -157,6 +157,6 @@ void TestChainList() {
     }
 }
 int main(int argc, char **argv) {
-    //TestLinearList();
-    TestChainList();
+    //TestLinearList();  // OK!
+    //TestChainList();  // OK!
 }
