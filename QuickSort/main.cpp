@@ -1,4 +1,4 @@
-// 看了《代码之美》第三章，忍不住要实现一下
+// 《代码之美》第三章
 
 int x[10];
 
@@ -21,7 +21,7 @@ void quicksort(int l, int n)
 	int i, m;
 	swap(l, randint(l, n));
 	m = l;
-	for (i = 1; i < n; ++i) {
+	for (i = l + 1; i < n; ++i) {
 		if (x[i] < [l]) {
 			swap(++m, i);
 		}
