@@ -19,8 +19,8 @@ void quicksort(int l, int n)
 	if (l >= n) return;
 
 	int i, m;
-	swap(l, randint(l, n));
-	m = l;
+	swap(l, randint(l, n)); // 随机选择分界并交换到最左边
+	m = l; // m在循环的过程中始终为比选定分界小的数中下标最大的
 	for (i = l + 1; i < n; ++i) {
 		if (x[i] < [l]) {
 			swap(++m, i);
